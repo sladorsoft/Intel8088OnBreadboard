@@ -59,7 +59,7 @@ GCCFLAGS += -march=i8088 -mtune=i8088 -mcmodel=small -Os $(patsubst %,-D%,$(DEFI
 ASFLAGS += -march=i386 -mtune=i8086
 ASFLAGS += -mmnemonic=intel -msyntax=intel
 
-CFLAGS += -std=c11
+CFLAGS += -std=c11 -D_DEFAULT_SOURCE
 
 CXXFLAGS += -fno-use-cxa-atexit -std=c++14
 
