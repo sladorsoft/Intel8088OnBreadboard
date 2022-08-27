@@ -17,7 +17,7 @@ BUTTON_DELAY    EQU 5000
 btn_wait_for_press:
         mov bx, sp
         mov ah, [bx + 2]
-.1
+.1:
         in al, BUTTONS_STATE_REG
         push ax
 
@@ -30,7 +30,7 @@ btn_wait_for_press:
         and al, ah
         cmp al, ah
         jne .1
-.2
+.2:
         in al, BUTTONS_STATE_REG
         push ax
 

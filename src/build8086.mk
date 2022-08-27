@@ -35,6 +35,12 @@ ifeq (,$(SRCFILES))
     $(error SRCFILES not specified)
 endif
 
+ifeq ($(CPU_TYPE),186)
+DEFINES += CPU_TYPE=186
+else
+DEFINES += CPU_TYPE=86
+endif
+
 PREFIX ?= ia16-elf-
 CC	= $(PREFIX)gcc
 CXX = $(PREFIX)g++
@@ -63,7 +69,7 @@ CFLAGS += -std=c11 -D_DEFAULT_SOURCE
 
 CXXFLAGS += -fno-use-cxa-atexit -std=c++14
 
-NASMFLAGS += -f elf $(patsubst %,-I%,$(INC_DIRS))
+NASMFLAGS += -f elf $(patsubst %,-D%,$(DEFINES)) $(patsubst %,-I%,$(INC_DIRS))
 
 LDFLAGS += -T"$(realpath $(LDSCRIPT))"
 LDFLAGS += -Wl,-Map=$(BIN_NAME).map
