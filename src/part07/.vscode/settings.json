@@ -1,0 +1,8 @@
+{
+    "cmake.configureOnOpen": true,
+    "cmake.preferredGenerators": [
+        "MinGW Makefiles",
+        "MSYS Makefiles",
+        "Unix Makefiles"
+    ]
+}

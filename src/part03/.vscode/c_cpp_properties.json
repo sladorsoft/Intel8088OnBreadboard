@@ -1,16 +1,16 @@
 {
     "configurations": [
         {
-            "name": "8086",
+            "name": "ia16-elf",
             "cppStandard": "c++14",
             "cStandard": "c11",
             "intelliSenseMode": "linux-gcc-x64",
             "includePath": [
                 "${workspaceFolder}/**"
             ],
-            "defines": [
-            ],
-            "compilerPath": "${env:IA16_DIR}/bin/ia16-elf-g++.exe"
+            "defines": [],
+            "compilerPath": "ia16-elf-gcc",
+            "configurationProvider": "ms-vscode.cmake-tools"
         }
     ],
     "version": 4

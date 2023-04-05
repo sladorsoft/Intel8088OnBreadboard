@@ -1,0 +1,4 @@
+{
+    "cmake.configureArgs": [ "--toolchain ${workspaceFolder}/../ia16-elf.cmake" ]
+    "cmake.generator": "MinGW Makefiles"
+}
