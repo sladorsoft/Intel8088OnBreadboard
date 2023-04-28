@@ -1,12 +1,17 @@
 cmake_minimum_required(VERSION 3.15)
 
+set(CMAKE_SYSTEM_NAME Generic)
+set(CMAKE_C_COMPILER ia16-elf-gcc)
+set(CMAKE_CXX_COMPILER ia16-elf-g++)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_TOOLCHAIN_FILE ${CMAKE_CURRENT_LIST_DIR}/../ia16-elf.cmake)
 
 project(part07 C CXX ASM_NASM)
 set(TARGET_NAME ${PROJECT_NAME})
 set(TARGET_NAME_2 ${PROJECT_NAME}_186)
+
+include_directories(src)
+link_libraries(nosys c gcc)
 
 set(LINKER_SCRIPT ${CMAKE_CURRENT_LIST_DIR}/../bare8086.ld)
 

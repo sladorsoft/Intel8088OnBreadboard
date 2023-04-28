@@ -1,4 +1,5 @@
 {
-    "cmake.configureArgs": [ "--toolchain ${workspaceFolder}/../ia16-elf.cmake" ]
-    "cmake.generator": "MinGW Makefiles"
+    "cmake.configureOnOpen": true,
+    "cmake.generator": "Unix Makefiles",
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
 }

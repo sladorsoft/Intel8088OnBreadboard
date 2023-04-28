@@ -1,8 +1,5 @@
 {
     "cmake.configureOnOpen": true,
-    "cmake.preferredGenerators": [
-        "MinGW Makefiles",
-        "MSYS Makefiles",
-        "Unix Makefiles"
-    ]
+    "cmake.generator": "Unix Makefiles",
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
 }

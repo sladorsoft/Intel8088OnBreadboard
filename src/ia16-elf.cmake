@@ -1,8 +1,0 @@
-set(CMAKE_SYSTEM_NAME Generic)
-
-set(CMAKE_C_COMPILER_ID GNU)
-set(CMAKE_CXX_COMPILER_ID GNU)
-set(CMAKE_AR ia16-elf-ar)
-set(CMAKE_C_COMPILER ia16-elf-gcc)
-set(CMAKE_CXX_COMPILER ia16-elf-g++)
-set(CMAKE_ASM_COMPILER nasm)
